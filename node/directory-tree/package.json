@@ -1,0 +1,31 @@
+{
+  "name": "directory-tree",
+  "version": "0.0.1",
+  "license": "MIT",
+  "bin": {
+    "directory-tree": "dist/bin/index.js"
+  },
+  "scripts": {
+    "start": "ts-node src/bin/index.ts",
+    "build": "BABEL_ENV=build babel src --out-dir dist --extensions .ts --delete-dir-on-start --no-comments",
+    "test": "jest --coverage",
+    "test:watch": "jest --watchAll"
+  },
+  "dependencies": {
+    "commander": "^8.3.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.5",
+    "@babel/plugin-transform-runtime": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "@babel/preset-typescript": "^7.16.5",
+    "@types/jest": "^27.0.3",
+    "@types/node": "^16.11.12",
+    "babel-jest": "^27.4.5",
+    "jest": "^27.4.5",
+    "memfs": "^3.4.0",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
+  }
+}
