@@ -1,0 +1,32 @@
+{
+  "name": "external-sorting",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "generate": "ts-node scripts/generate-unsorted-file.ts",
+    "build": "BABEL_ENV=build babel src --out-dir dist --extensions .ts --delete-dir-on-start --no-comments",
+    "dev": "yarn generate && node -r ts-node/register src/index.ts",
+    "start": "yarn generate && node --max-old-space-size=50 dist/index.js",
+    "test": "jest --coverage",
+    "test:watch": "jest --watchAll"
+  },
+  "dependencies": {
+    "csv-parse": "^5.0.4",
+    "progress": "^2.0.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.7",
+    "@babel/core": "^7.16.7",
+    "@babel/plugin-transform-runtime": "^7.16.7",
+    "@babel/preset-env": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/jest": "^27.4.0",
+    "@types/node": "^16.11.12",
+    "@types/progress": "^2.0.5",
+    "babel-jest": "^27.4.5",
+    "jest": "^27.4.5",
+    "memfs": "^3.4.1",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
+  }
+}
