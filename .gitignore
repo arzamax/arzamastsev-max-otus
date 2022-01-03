@@ -1,5 +1,9 @@
 # dependencies
 node_modules
+yarn-error.log
 
 # IDE
 .idea
+
+#misc
+.DS_Store
