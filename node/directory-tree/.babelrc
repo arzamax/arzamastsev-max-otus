@@ -1,0 +1,14 @@
+{
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-typescript"
+  ],
+  "env": {
+    "build": {
+      "ignore": [
+        "**/*.test.ts"
+      ]
+    }
+  },
+  "plugins": ["@babel/plugin-transform-runtime"]
+}
