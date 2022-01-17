@@ -7,3 +7,9 @@ yarn-error.log
 
 #misc
 .DS_Store
+
+# production
+dist
+
+#jest
+coverage
